@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.jboss.shrinkwrap.resolver</groupId>
         <artifactId>shrinkwrap-resolver-parent</artifactId>
-        <version>3.0.0-SNAPSHOT</version>
+        <version>3.0.0-alpha-3-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -18,14 +18,6 @@
     <name>ShrinkWrap Resolver Dependency Chain</name>
     <description>Single-POM Definition to export the ShrinkWrap Resolver artifacts in proper scope</description>
     <packaging>pom</packaging>
-
-
-    <!-- Properties -->
-    <properties>
-
-        <!-- Versioning -->
-
-    </properties>
 
     <!-- Dependencies -->
     <dependencies>
@@ -66,6 +58,18 @@
         <dependency>
             <groupId>org.jboss.shrinkwrap.resolver</groupId>
             <artifactId>shrinkwrap-resolver-impl-maven-archive</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.shrinkwrap.resolver</groupId>
+            <artifactId>shrinkwrap-resolver-api-maven-embedded</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.shrinkwrap.resolver</groupId>
+            <artifactId>shrinkwrap-resolver-impl-maven-embedded</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
